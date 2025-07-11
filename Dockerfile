@@ -1,23 +1,19 @@
+# Use Alpine for smaller image; use Debian if you need better native support
 FROM node:18-alpine
 
-# Set working directory
 WORKDIR /app
 
-# Copy only package files and install dependencies
+# Install dependencies
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
-# Now copy the rest of your application
+# Copy rest of your app
 COPY . .
 
-# Rebuild cache before build
+# Clean cache and build
 RUN rm -rf .cache build
-
-# Build Strapi admin panel
 RUN npm run build
 
-# Expose the port Railway uses (default is 1337 for Strapi)
 EXPOSE 1337
 
-# Start Strapi
 CMD ["npm", "start"]
