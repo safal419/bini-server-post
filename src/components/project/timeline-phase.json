@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_project_timeline_phases",
+  "info": {
+    "displayName": "Timeline Phase"
+  },
+  "options": {},
+  "attributes": {
+    "phase": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "completed": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects (Project Page)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": "string"
+    },
+    "contractNo": {
+      "type": "string"
+    },
+    "projectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Completed",
+        "Ongoing",
+        "In Progress"
+      ]
+    },
+    "client": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fullDescription": {
+      "type": "blocks"
+    },
+    "specification": {
+      "type": "component",
+      "component": "project.specification",
+      "repeatable": true
+    },
+    "services": {
+      "type": "component",
+      "component": "project.service",
+      "repeatable": true
+    },
+    "image": {
+      "type": "component",
+      "component": "project.image",
+      "repeatable": true
+    },
+    "timeline": {
+      "type": "component",
+      "component": "project.timeline-phase",
+      "repeatable": true
+    },
+    "team": {
+      "type": "component",
+      "component": "project.team-member",
+      "repeatable": true
+    }
+  }
+}

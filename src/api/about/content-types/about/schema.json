@@ -12,12 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
+    "firstDescription": {
+      "type": "blocks"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "projects": {
+      "type": "biginteger"
+    },
+    "timeline": {
+      "type": "component",
+      "component": "about.timeline-event",
+      "repeatable": true
+    },
+    "achievement": {
+      "type": "component",
+      "component": "about.achievements",
+      "repeatable": true
     }
   }
 }

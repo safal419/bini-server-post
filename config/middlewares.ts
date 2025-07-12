@@ -1,12 +1,22 @@
-export default [
-  'strapi::logger',
+const middlewares = [
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:5173'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      headers: ['Content-Type', 'Authorization'],
+      credentials: true,
+    },
+  },
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
 ];
+
+export default middlewares;

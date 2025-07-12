@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "major_jobs",
+  "info": {
+    "singularName": "major-job",
+    "pluralName": "major-jobs",
+    "displayName": "MajorJobs (Project Page)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "contractNo": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "jobStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Completed",
+        "In Progress"
+      ]
+    }
+  }
+}

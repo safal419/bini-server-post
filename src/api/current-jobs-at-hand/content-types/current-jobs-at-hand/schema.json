@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "current_jobs_at_hands",
+  "info": {
+    "singularName": "current-jobs-at-hand",
+    "pluralName": "current-jobs-at-hands",
+    "displayName": "currentJobsAtHand (Project Page)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "contractNo": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "projectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Ongoing",
+        "In Progress"
+      ]
+    }
+  }
+}

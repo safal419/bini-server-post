@@ -15,29 +15,47 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text",
-      "maxLength": 80
+    "excerpt": {
+      "type": "string"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "content": {
+      "type": "richtext"
     },
-    "cover": {
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Technology",
+        "Projects",
+        "Industry News",
+        "Maintenance",
+        "Innovation"
+      ]
+    },
+    "tags": {
+      "type": "component",
+      "component": "article.tags",
+      "repeatable": true
+    },
+    "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
-        "videos"
+        "videos",
+        "audios"
       ]
     },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
+    "pic": {
+      "type": "component",
+      "component": "article.pic",
+      "repeatable": true
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_technology_partner_products",
+  "info": {
+    "displayName": "products"
+  },
+  "options": {},
+  "attributes": {
+    "products": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

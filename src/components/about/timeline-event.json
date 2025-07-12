@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_timeline_events",
+  "info": {
+    "displayName": "Timeline Event"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "images": {
+      "type": "component",
+      "component": "about.images",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

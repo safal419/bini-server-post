@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_article_pics",
+  "info": {
+    "displayName": "pic"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "path": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

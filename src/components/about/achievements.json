@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_achievements",
+  "info": {
+    "displayName": "Achievements"
+  },
+  "options": {},
+  "attributes": {
+    "yearOfExcellence": {
+      "type": "biginteger"
+    },
+    "projectsCompleted": {
+      "type": "biginteger"
+    },
+    "majorPlantsServed": {
+      "type": "biginteger"
+    },
+    "clientSatisfaction": {
+      "type": "biginteger"
+    }
+  },
+  "config": {}
+}
