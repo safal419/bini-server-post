@@ -1,6 +1,26 @@
 const middlewares = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          'default-src': ["'self'"],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://market-assets.strapi.io',
+            'https://res.cloudinary.com', 
+          ],
+          'media-src': ["'self'", 'https://res.cloudinary.com'],
+          'script-src': ["'self'"],
+          'style-src': ["'self'", "'unsafe-inline'"],
+          
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
