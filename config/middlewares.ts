@@ -4,7 +4,7 @@ const middlewares = [
   {
     name: 'strapi::cors',
     config: {
-      origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:5173'],
+      origin: process.env.CORS_ORIGIN?.split(','),
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true,
