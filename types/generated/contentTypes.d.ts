@@ -674,6 +674,39 @@ export interface ApiPartnerSliderPartnerSlider
   };
 }
 
+export interface ApiProcessorProcessor extends Struct.CollectionTypeSchema {
+  collectionName: 'processors';
+  info: {
+    displayName: 'Processors and Metallizers (Project Page)';
+    pluralName: 'processors';
+    singularName: 'processor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    area: Schema.Attribute.String;
+    contractNo: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::processor.processor'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -1335,6 +1368,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::major-job.major-job': ApiMajorJobMajorJob;
       'api::partner-slider.partner-slider': ApiPartnerSliderPartnerSlider;
+      'api::processor.processor': ApiProcessorProcessor;
       'api::project.project': ApiProjectProject;
       'api::service.service': ApiServiceService;
       'api::technology-partner.technology-partner': ApiTechnologyPartnerTechnologyPartner;
