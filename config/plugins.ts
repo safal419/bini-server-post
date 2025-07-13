@@ -7,6 +7,12 @@ module.exports = ({ env }) => ({
         api_key: env('CLOUDINARY_KEY'),
         api_secret: env('CLOUDINARY_SECRET'),
       },
+      breakpoints: {
+        thumbnail: 245,
+        small: 800,
+        medium: 1600,
+        large: 2400,
+      },
     },
   },
 });
